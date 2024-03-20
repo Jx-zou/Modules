@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="USE_RELEASE_OPTION" value="false" />
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="postgresql" />
+        <module name="mail" />
+        <module name="oauth" />
+        <module name="reactive-oauth-postgresql" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="database" options="" />
+      <module name="mail" options="-parameters" />
+      <module name="oauth" options="-parameters" />
+      <module name="postgresql" options="-parameters" />
+      <module name="reactive" options="" />
+      <module name="reactive-oauth-postgresql" options="-parameters" />
+      <module name="security" options="" />
+      <module name="system" options="" />
+    </option>
+  </component>
+</project>
