@@ -3,6 +3,7 @@ package org.modules.reactive.entity;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.modules.reactive.enmus.BaseStatus;
 import org.modules.reactive.entity.abstracts.SnowflakeIdEntity;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
@@ -21,11 +22,11 @@ public class Role extends SnowflakeIdEntity {
     @Column
     private String name;
     @Column
-    private Byte status;
+    private Integer status = BaseStatus.NORMAL.getStatus();
     @Column
-    private Boolean defaulted;
+    private Boolean defaulted = false;
     @Column
-    private Boolean enabled;
+    private Boolean enabled = true;
     @Column
     private String comments;
 }

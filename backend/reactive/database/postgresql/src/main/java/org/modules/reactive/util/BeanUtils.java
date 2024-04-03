@@ -1,6 +1,8 @@
 package org.modules.reactive.util;
 
 import java.lang.reflect.Field;
+import java.util.List;
+import java.util.function.Function;
 
 /**
  * The type BeanUtils.
@@ -32,5 +34,21 @@ public class BeanUtils {
             }
         }
         return targetBean;
+    }
+
+    @FunctionalInterface
+    public interface Contrast<T>{
+        boolean verify(T s, T t);
+    }
+
+    public static <T> List<T> mergeList(List<T> sourceBeanList, List<T> targetBeanList, Contrast<T> contrast) {
+        for (int i = 0; i < sourceBeanList.size(); i++) {
+            for (T targetBean : targetBeanList) {
+                if (contrast.verify(sourceBeanList.get(i), targetBean)) {
+                    sourceBeanList.set(i, BeanUtils.merge(sourceBeanList.get(i), targetBean));
+                }
+            }
+        }
+        return sourceBeanList;
     }
 }

@@ -1,0 +1,8 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:15432/modules?serverTimezone=UTC
+    username: postgres
+    password: postgres
+    name: modules
+  jpa:
+    show-sql: true

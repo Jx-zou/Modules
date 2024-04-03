@@ -13,6 +13,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.modules.reactive</groupId>
             <artifactId>oauth</artifactId>
             <version>1.0</version>
@@ -20,6 +24,12 @@
         <dependency>
             <groupId>org.modules.reactive</groupId>
             <artifactId>postgresql</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.modules</groupId>
+            <artifactId>initialize-runner</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>

@@ -3,7 +3,7 @@ package org.modules.reactive.entity;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.modules.reactive.entity.abstracts.SnowflakeIdEntity;
+import org.modules.reactive.entity.abstracts.BaseEntity;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
@@ -16,7 +16,7 @@ import org.springframework.data.relational.core.mapping.Table;
 @Setter
 @ToString
 @Table(name = "t_account_role", schema = "auth")
-public class AccountRole extends SnowflakeIdEntity {
+public class AccountRole extends BaseEntity<Long> {
 
     @Column
     private Long aid;

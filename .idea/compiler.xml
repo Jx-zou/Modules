@@ -3,6 +3,7 @@
   <component name="CompilerConfiguration">
     <option name="USE_RELEASE_OPTION" value="false" />
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -11,12 +12,15 @@
         <module name="mail" />
         <module name="oauth" />
         <module name="reactive-oauth-postgresql" />
+        <module name="initialize-runner" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common" options="" />
       <module name="database" options="" />
+      <module name="initialize-runner" options="-parameters" />
       <module name="mail" options="-parameters" />
       <module name="oauth" options="-parameters" />
       <module name="postgresql" options="-parameters" />
